@@ -88,6 +88,7 @@ namespace BankForm
             else if (lsbAccounts.SelectedItem.ToString() == "Invest1") { invest1.CalculateInterest(); a = invest1.Balance.ToString(); InvestTransaction("Interest", invest1.InterestRate); }
             else if (lsbAccounts.SelectedItem.ToString() == "Omni1") { omni1.CalculateInterest(); a = omni1.Balance.ToString(); OmniTransaction("Withdrawal", omni1.InterestRate); }
             else { a = "Please select an account before checking the balance"; }
+            lblTransaction.Text = a;
         }
     }
 }
